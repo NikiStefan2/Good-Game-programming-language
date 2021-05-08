@@ -1,11 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-color: #424242;
 }
-#Compile-Btn-Submit{
+.btn{
     background-color: white;
-    width: 100px;
-    height: 30px;
+    width: 150px;
+    height: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 10;
     text-align: center;
+    position: relative;
+}
+#code{
+    width: 40%;
+    height: 80%;
+    margin-top: 30px;
+    margin-left: 30px;
+    position: absolute;
+}
+/*#code-editor{
+    height: 100vh;
+
+    background-color: blue;
+
+    height: 100vh;
+    margin-right: 0;
+    margin-top: 0;
+    position: relative;
+    top: 0;
+
+    width: auto;
+}*/
+#buttons{
+    display: flex;
+
+    gap: 30px;
+
+   /* position: relative;*/
+
+    margin-left: 70px;
+
+    position: absolute;
+
+    top: 87%;
+}
+#code_compiled{
+    width: 40%;
+    height: 80%;
+    /*margin-bottom: 1000px;*/
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 55%;
+    /*margin-left: 50%;
+
+    bottom: 745px;*/
+/*s*/
+
+}
+
+/*#compiled-code{
+    height: 100vh;
+    margin-right: 0;
+    margin-top: 0;
+    position: relative;
+    top: 0;
+    /*margin-bottom: 100px;*/
+   /* background-color: red;
+}*/
+
+#CompiledButtons{
+    display: flex;
+
+    gap: 50px;
+
+   /* position: relative;*/
+
+    margin-left: 65%;
+
+    position: absolute;
+
+    top: 87%;
+}
+
+textarea:disabled{
+    background-color: white;
 }

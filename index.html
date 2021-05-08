@@ -7,11 +7,32 @@
 </head>
 
 <body>
-    <div id="code-editor">
-        <textarea id="code"></textarea>
-
-        <div id="Compile-Btn-Submit">Compile</div>
-    </div>
+    <!--<div id="code-editor">-->
+        <textarea id="code" style="resize: none;"></textarea>
+        <textarea id="code_compiled" disabled readonly style="resize: none;"></textarea>
+        <div id="buttons">
+            <div id="Compile-Btn-Submit" class="btn">
+                <p>Compile</p>
+            </div>
+            <div id="Delete-Btn-Submit" class="btn">
+                <p>Delete</p>
+            </div>
+            <div id="Copy-Btn-Submit" class="btn">
+                <p>Copy</p>
+            </div>
+        </div>
+        <div id="CompiledButtons">
+            <div id="Delete-Btn" class="btn">
+                <p>Delete</p>
+            </div>
+            <div id="Copy-Btn" class="btn">
+                <p>Copy</p>
+            </div>
+        </div>
+        <!--<div id="compiled-code">
+            <textarea id="code_compiled" disabled></textarea>
+        </div>
+    </div>-->
 
     <script src="app.js"></script>
     <script src="commands.js"></script>
