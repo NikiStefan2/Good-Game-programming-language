@@ -43,29 +43,35 @@ let CreateVariable = (Variablename, VariableValue) => {
 
 let WriteToConsole = (message) => {
     console.log(message);
-    for (let j = 0; j < VariablesNames.length; j++) {
-        if (message == VariablesNames[j]) {
-            //eval('console.log(' + message + ');');
+    let j;
 
-            Textarea.value += "\n" + VariablesValues[j];
+    if (message != VariablesNames || VariablesNames.length == 0) {
+        //eval('console.log("' + message + '");');
+        // eval('console.log("' + message + '");');
+        console.log(VariablesNames);
 
-            console.log(VariablesNames[j]);
-            console.log(VariablesValues[j]);
+        Textarea.value += "\n" + message;
+        console.log(message);
+    }
 
-            j = 0;
+    if (VariablesNames.length != 0) {
+        for (j = 0; j < VariablesNames.length; j++) {
+            console.log("vaca");
 
-            break;
-        } else if(!message == VariablesNames[j]){
-            //eval('console.log("' + message + '");');
-            // eval('console.log("' + message + '");');
-            console.log(VariablesNames);
+            if (message == VariablesNames[j]) {
+                //eval('console.log(' + message + ');');
 
-            Textarea.value += "\n" + message;
-            console.log(message);
+                Textarea.value += "\n" + VariablesValues[j];
 
-            break;
+                console.log(VariablesNames[j]);
+                console.log(VariablesValues[j]);
+
+                j = 0;
+
+                return;
+            }
+            //console.log(message);
         }
-        //console.log(message);
     }
 }
 
@@ -101,7 +107,7 @@ console.log("hehe bn ca merge nu mergea ca nu stiam ca merge looooll");
 let Repeta = (Count, execution) => {
     let i = 0;
 
-    while(i < Count){
+    while (i < Count) {
         Executa(execution.slice(2, 5));
         i++;
     }
@@ -114,7 +120,7 @@ let Executa = (words) => {
         // let sentenceWords = [];
 
         if (word.includes("(scrie")) {
-           // SentenceType = "METHOD";
+            // SentenceType = "METHOD";
             //sentenceWords = word.split(' ');
 
             index = 2;
