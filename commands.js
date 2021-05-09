@@ -1,6 +1,11 @@
 let VariablesNames = [],
     VariablesValues = []; //ty[es types] types
 
+let functions = [],
+    functionsValue = [];
+
+let index = 0;
+
 let CreateVariable = (Variablename, VariableValue) => {
     //eval(new ("let " + Variablename + " = " + VariableValue + ";"));
     //console.log(eval(new let("var " + Variablename + " = " + VariableValue + ";", )));
@@ -8,22 +13,28 @@ let CreateVariable = (Variablename, VariableValue) => {
     VariablesValues.push(VariableValue);*/
 
     //console.log(Variables);
+
+    VariablesNames.push(Variablename);
+    VariablesValues.push(VariableValue);
+    console.log('lool');
+
     console.log(VariablesNames);
     console.log(VariablesValues);
 
-    if(VariablesValues.length === 0 || VariablesNames.length === 0){
-        VariablesNames.push(Variablename);
-        VariablesValues.push(VariableValue);
-    }
+    // ModifyVariable();
 
-    for(let i = 0; i < VariablesNames; i++){
-        if(VariableName == VariablesNames[i]){
-            VariablesValues[i] = VariableValue;
-        } else{
-            VariablesNames.push(Variablename);
-            VariablesValues.push(VariableValue);
+    /*for (let i = 0; i < VariablesNames; i++) {
+        if (VariableName == VariablesNames[i]) {
+            //VariablesValues[i] = VariableValue;
+            ModifyVariable(i, VariableValue);
+            console.log("Duplication");
+            console.log(i);
+            console.log(VariablesNames[i], VariablesValues[i]);
         }
-    }
+        else {
+
+        }
+    }*/
 
     //let varsta = 13
 }
@@ -31,7 +42,7 @@ let CreateVariable = (Variablename, VariableValue) => {
 //console.log(Variables);
 
 let WriteToConsole = (message) => {
-
+    console.log(message);
     for (let j = 0; j < VariablesNames.length; j++) {
         if (message == VariablesNames[j]) {
             //eval('console.log(' + message + ');');
@@ -44,12 +55,13 @@ let WriteToConsole = (message) => {
             j = 0;
 
             break;
-        } else {
+        } else if(!message == VariablesNames[j]){
             //eval('console.log("' + message + '");');
             // eval('console.log("' + message + '");');
             console.log(VariablesNames);
 
-            Textarea.value += "\n" +  message;
+            Textarea.value += "\n" + message;
+            console.log(message);
 
             break;
         }
@@ -57,11 +69,60 @@ let WriteToConsole = (message) => {
     }
 }
 
-let ModifyVariable = (index, newValue) => {
+/*let ModifyVariable = (index, newValue) => {
     /*for(let i = 0; i < VariablesNames; i++){
         if(NumeVariabila != VariablesNames){
             CreateVariable()
         }
     }*/
-    VariablesValues[index] = newValue;
+/*VariablesValues[index] = newValue;
+
+console.log("hehe bn ca merge nu mergea ca nu stiam ca merge looooll");
+
+/*for (let i = 0; i < VariablesNames; i++) {
+    if (VariableName == VariablesNames[i]) {
+        VariablesValues[i] = VariableValue;
+        console.log("Duplication");
+        console.log(i);
+        console.log(VariablesNames[i], VariablesValues[i]);
+    }
+    else {
+        VariablesNames.push(Variablename);
+        VariablesValues.push(VariableValue);
+        console.log('lool');
+    }
+}*/
+//}
+
+/*let CreateFunction = (ExecuteCommand) => {
+    Textarea.value += "\n \n \n " + ExecuteCommand.toString();
+}*/
+
+let Repeta = (Count, execution) => {
+    let i = 0;
+
+    while(i < Count){
+        Executa(execution.slice(2, 5));
+        i++;
+    }
+}
+
+let Executa = (words) => {
+    words.forEach(word => {
+
+        // let SentenceType;
+        // let sentenceWords = [];
+
+        if (word.includes("(scrie")) {
+           // SentenceType = "METHOD";
+            //sentenceWords = word.split(' ');
+
+            index = 2;
+
+            WriteToConsole(words[1]);
+
+            console.log(words);
+            console.log(words[1]);
+        }
+    });
 }
