@@ -88,3 +88,13 @@ body{
 textarea:disabled{
     background-color: white;
 }
+
+textarea{
+    font-size: large;
+
+    font-weight: 1;
+
+    font-style: normal;
+
+    font-family: monospace;
+}

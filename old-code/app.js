@@ -76,7 +76,15 @@ Compile_Btn.addEventListener('click', function () {
             }*/
             /*CreateFunction(executeWords);
         }*/
-        else if(propozitie.includes("repeta") && !propozitie.includes("(repeta)")){
+        else if(propozitie.includes("repeta") && !propozitie.includes("(repeta")){
+            SentenceType = "METHOD";
+            sentenceWords = propozitie.split(' ');
+
+            //let executeWords = sentenceWords.slice(3);
+
+            Repeta(sentenceWords[1], sentenceWords);
+        }
+        else if(propozitie.includes("apeleaza") && !propozitie.includes("(apeleaza")){
             SentenceType = "METHOD";
             sentenceWords = propozitie.split(' ');
 

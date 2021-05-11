@@ -113,6 +113,22 @@ let Repeta = (Count, execution) => {
     }
 }
 
+let Funcite = (execution) => {
+    let isCalled = false;
+
+    if(isCalled){
+
+    }
+}
+
+let ExecuteFunction = (FunctionName) => {
+    for(let g = 0; g < functions; g++){
+        if(FunctionName == functions[g]){
+            Executa(functionsValue[g]);
+        }
+    }
+}
+
 let Executa = (words) => {
     words.forEach(word => {
 
