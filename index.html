@@ -8,32 +8,49 @@
 
 <body>
     <!--<div id="code-editor">-->
-        <textarea id="code" style="resize: none;" spellcheck="false"></textarea>
-        <textarea id="code_compiled" style="resize: none;" spellcheck="false"></textarea>
-        <div id="buttons">
-            <div id="Compile-Btn-Submit" class="btn">
-                <p>Compile</p>
-            </div>
-            <div id="Delete-Btn-Submit" class="btn">
-                <p>Delete</p>
-            </div>
-            <div id="Copy-Btn-Submit" class="btn">
-                <p>Copy</p>
-            </div>
+
+
+    <textarea id="code" style="resize: none;" spellcheck="false"></textarea>
+    <!-- <span style="color: blue;" id="haha">lol</span> -->
+    <div id="Compiling-loading-screen">
+        <!-- <span>Loading...</span> -->
+        <span>Compiling</span>
+        <!--crezui ca are doua l prima data puses pusasem 1 dupa vazui d pusai 2 si cautai pe nmet si vazui ca are doart doar 1 din obisnuinta cu ewngleza doi doi de l-->
+        <div id="dots">
+            <div class="dot" id="dot-1"></div>
+            <div class="dot" id="dot-2"></div>
+            <div class="dot" id="dot-3"></div>
         </div>
-        <div id="CompiledButtons">
-            <div id="Delete-Btn" class="btn">
-                <p>Delete</p>
-            </div>
-            <div id="Copy-Btn" class="btn">
-                <p>Copy</p>
-            </div>
+    </div>
+    <textarea class="code_compiled" style="resize: none;" spellcheck="false" contenteditable="false"
+        readonly></textarea>
+    <div id="buttons">
+        <div id="Compile-Btn-Submit" class="btn">
+            <span>Compile</span>
         </div>
-        <!--<div id="compiled-code">
+        <div id="Delete-Btn-Submit" class="btn">
+            <span>Delete</span>
+        </div>
+        <div id="Copy-Btn-Submit" class="btn">
+            <span>Copy</span>
+        </div>
+    </div>
+    <div id="CompiledButtons">
+        <div id="Delete-Btn" class="btn">
+            <span>Delete</span>
+        </div>
+        <div id="Copy-Btn" class="btn">
+            <span>Copy</span>
+        </div>
+        <div id="Stop_Btn" class="btn">
+            <span>Stop</span>
+        </div>
+    </div>
+    <!--<div id="compiled-code">
             <textarea id="code_compiled" disabled></textarea>
         </div>
     </div>-->
-    
+
     <script src="UX.js"></script>
     <script src="main.js"></script>
     <script src="lexer.js"></script>

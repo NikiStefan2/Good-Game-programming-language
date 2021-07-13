@@ -1,18 +1,29 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url(Raleway-VariableFont_wght.ttf);
+}
+
 *{
     box-sizing: border-box;
 }
 
 body{
-    background-color: #424242;
+    /* background-color: #424242; */
+    background-image: url("poza.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .btn{
-    background-color: white;
     width: 150px;
     height: 50px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 10;
     text-align: center;
     position: relative;
+    background-color: transparent;
+    border: 2px solid #CD113B;
+    color: white;
+    font-size: 30px;
 }
 #code{
     width: 40%;
@@ -20,6 +31,9 @@ body{
     margin-top: 30px;
     margin-left: 30px;
     position: absolute;
+    background-color: #2C2E43;
+    border: 0;
+    outline: 0;
 }
 /*#code-editor{
     height: 100vh;
@@ -47,7 +61,7 @@ body{
 
     top: 87%;
 }
-#code_compiled{
+.code_compiled{
     width: 40%;
     height: 80%;
     /*margin-bottom: 1000px;*/
@@ -57,6 +71,11 @@ body{
     /*margin-left: 50%;
 
     bottom: 745px;*/
+
+    background-color: #2C2E43;
+    border: 0;
+    outline: 0;
+    cursor: default;
 /*s*/
 
 }
@@ -78,7 +97,7 @@ body{
 
    /* position: relative;*/
 
-    margin-left: 65%;
+    margin-left: 57%;
 
     position: absolute;
 
@@ -97,4 +116,110 @@ textarea{
     font-style: normal;
 
     font-family: monospace;
+
+    color: white;
 }
+
+.btn span{
+    /*btan*/
+    position: relative;
+    top: 7px;
+}
+
+.code-lines{
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    left: 10px;
+    background-color: #2C2E43;
+    color: white;
+    border-right: 1px solid #CD113B;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.97em;
+    overflow: hidden;
+}
+
+#Compiling-loading-screen{
+    width: 170px;
+    height: 170px;
+    background-color: #222831;
+    position: absolute;
+    left: calc((100vw - 170px) / 2 - 15px);
+    top: calc((100vh - 170px) / 2 - 15px);
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#Compiling-loading-screen span{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    top: 20px;
+    position: relative;
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 1000px;
+    animation-name: dotAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+#dots{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 80px;
+    gap: 20px;
+    left: calc((100% - 85px) / 2);
+}
+
+@keyframes dotAnimation{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#dot-1{
+    animation-delay: 0;
+}
+
+#dot-2{
+    animation-delay: 0.5s;
+}
+
+#dot-3{
+    animation-delay: 1s;
+}/*
+
+.wrap{
+    position: relative;
+    display: inline-block;
+}
+
+.wrap span{
+    position: absolute;
+    top: 0;
+    right: 0;
+} */
+
+/* #haha{
+    position: absolute;
+    left: 200px;
+    top: 50px;
+} */
