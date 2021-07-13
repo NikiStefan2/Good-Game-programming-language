@@ -22,53 +22,55 @@ class Token {
                 tokens.push([this.Token_Type, this.Token_Value]);
             }
             Index++;
-        }
-        operators.forEach(operator => {
-            if (words[Index] == operator) {
 
-                this.Token_Type = "OPERATOR";
-                // this.Token_Value = words[Index];
-                tokens.push(this.Token_Type);
+            operators.forEach(operator => {
+                if (words[Index] == operator) {
 
-                // console.log(words[Index]);
+                    this.Token_Type = "OPERATOR";
+                    // this.Token_Value = words[Index];
+                    tokens.push(this.Token_Type);
 
-                /*if (words[Index] == operators[0]) {
-                    this.Token_Type = "VARIABLE";
-                    this.Token_Value = words[Index + 1];
-                    tokens.push([this.Token_Type, this.Token_Value]);
+                    // console.log(words[Index]);
+
+                    /*if (words[Index] == operators[0]) {
+                        this.Token_Type = "VARIABLE";
+                        this.Token_Value = words[Index + 1];
+                        tokens.push([this.Token_Type, this.Token_Value]);
+                    }
+                    if (words[Index] == operators[1]) {
+                        this.Token_Type = "VARIABLE";
+                        this.Token_Value = words[Index + 1];
+                        tokens.push([this.Token_Type, this.Token_Value]);
+                    }
+                    if (words[Index] == operators[2]) {
+                        this.Token_Type = "VARIABLE";
+                        this.Token_Value = words[Index + 1];
+                        tokens.push([this.Token_Type, this.Token_Value]);
+                    }
+                    if (words[Index] == operators[3]) {
+                        this.Token_Type = "VARIABLE";
+                        this.Token_Value = words[Index + 1];
+                        tokens.push([this.Token_Type, this.Token_Value]);
+                    }
+                    if (words[Index] == operators[4]) {
+                        this.Token_Type = "VARIABLE";
+                        this.Token_Value = words[Index + 1];
+                        tokens.push([this.Token_Type, this.Token_Value]);
+                    }*/
                 }
-                if (words[Index] == operators[1]) {
-                    this.Token_Type = "VARIABLE";
-                    this.Token_Value = words[Index + 1];
-                    tokens.push([this.Token_Type, this.Token_Value]);
-                }
-                if (words[Index] == operators[2]) {
-                    this.Token_Type = "VARIABLE";
-                    this.Token_Value = words[Index + 1];
-                    tokens.push([this.Token_Type, this.Token_Value]);
-                }
-                if (words[Index] == operators[3]) {
-                    this.Token_Type = "VARIABLE";
-                    this.Token_Value = words[Index + 1];
-                    tokens.push([this.Token_Type, this.Token_Value]);
-                }
-                if (words[Index] == operators[4]) {
-                    this.Token_Type = "VARIABLE";
-                    this.Token_Value = words[Index + 1];
-                    tokens.push([this.Token_Type, this.Token_Value]);
-                }*/
-            }
-        });
-        numbers.forEach(number => {
-            if (words[Index].includes(number)) {
+            });
+            // numbers.forEach(number => {
+            if (typeof words[Index] === "number") {
 
                 this.Token_Type = "INTEGER";//TRUBUIA STRING DAR FACUO PRIMU INTEGER ;) STIAM EU BRESIT
                 this.Token_Value = words[Index];
                 tokens.push([this.Token_Type, this.Token_Value]);
+
+                console.log("number");
             }
 
-        });
-
+            //  });
+        }
 
         return tokens;
     }
