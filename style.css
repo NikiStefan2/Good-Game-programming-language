@@ -8,10 +8,12 @@
 }
 
 body{
-    /* background-color: #424242; */
+    /* background-color: #424242;*/
     background-image: url("poza.jpg");
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-size: cover;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .btn{
     width: 150px;
@@ -25,7 +27,7 @@ body{
     color: white;
     font-size: 30px;
 }
-#code{
+.code{
     width: 40%;
     height: 80%;
     margin-top: 30px;
@@ -34,6 +36,16 @@ body{
     background-color: #2C2E43;
     border: 0;
     outline: 0;
+    
+    font-size: large;
+
+    font-weight: 1;
+
+    font-style: normal;
+
+    font-family: monospace;
+
+    color: white;
 }
 /*#code-editor{
     height: 100vh;
@@ -132,8 +144,8 @@ textarea{
     flex-direction: column;
     text-align: center;
     position: relative;
-    top: 30px;
-    left: 10px;
+    top: 22px;
+    left: 3px;
     background-color: #2C2E43;
     color: white;
     border-right: 1px solid #CD113B;
@@ -147,8 +159,8 @@ textarea{
     height: 170px;
     background-color: #222831;
     position: absolute;
-    left: calc((100vw - 170px) / 2 - 15px);
-    top: calc((100vh - 170px) / 2 - 15px);
+    left: calc((100vw - 225px) / 2);/* - 15px);/**/
+    top: calc((100vh - 170px) / 2);/* - 15px);*/
     text-align: center;
     border-radius: 10px;
     opacity: 0;
@@ -223,3 +235,270 @@ textarea{
     left: 200px;
     top: 50px;
 } */
+
+#book-container{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: calc((100vw - 120px) / 2);
+    bottom: 150px;
+    color: white;
+}
+
+.docs-button{
+    font-size: 70px;
+    color: white;
+    cursor: default;
+}
+
+#code-editor{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#docs{
+    height: 100%;
+    background-color: #222831;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
+}
+
+#back-button{
+    width: 200px;
+    height: 70px;/*300px*/
+    position: relative;
+    left: 90vw;
+    top: 90vh;
+    background-color: #2C2E43;
+    color: white;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #555;
+}
+
+#table-of-contents{
+    width: 300px;
+    height: 500px;
+    position: relative;
+    top: calc((100% - 600px) / 2);/*600 e keia nu 300 nu 500 nu 700 ci 600 e perfect lol*/
+}
+
+#header{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
+/* .table-of-contants-item{
+
+} */
+
+.table-of-contents-item{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    /*sau font0 font-size 23px mergea dar las asa deocamb data si la de televizor s zisa deocamdata chiar acum lol*/
+    flex: 1 1 auto;
+
+}
+
+.table-of-contents-items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    top: 30px;
+    justify-content: space-evenly;
+
+}
+
+.item-border{
+    border-top: 2px solid white;
+}
+
+.table-of-contents-item a{
+    position: relative;
+    top: 10px;
+}
+
+#continut{
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+/* 
+.sticky-table-of-contents{
+    position: fixed;
+} */
+
+#Variabile-part-continut-lol{/*parte sau part prima data scrisai parte acu scvriu partca verificai acu scahimai bi inainte de verificai acu*/
+    /* width: 100%;
+    height: 2000px;
+    background-color: red; */
+}
+
+.continut-part{
+    width: 100%;
+    height: 500px;
+}
+
+.continut-part-header{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    position: relative;
+    /* left: 70px;
+    top: 50px; */
+    left: 30px;
+    top: 30px;
+}
+
+.continut-part-description{
+    color: white;
+    font-family: 'Raleway', sans-serif;/*Rogue -like*/
+    font-size: 20px;
+    position: relative;
+    top: 30px;
+    left: 20px;    
+}
+
+.code-example{
+    resize: none;/* puseem false lol ma cere cred in html sau in javascript fara formattrer icarly amicu l lu gideon lol mai tarziu sparge tot*/
+    background-color: #1c1c27;
+    outline: none;
+    border: 0;
+    font-family: monospace;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+table, th, td{
+    border: 1px solid white;
+    border-collapse: collapse;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+th, td{
+    padding: 15px;
+}
+
+.Variable-Contents-table-accepted-valors{/*in loc de table iti vine sa scrii value face mai mult sens cred value decvat table sau unde s is eu obisnuit cu balue lo si uitasem ca despre value vorbeam**/
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+
+#colorized-code{
+    display: none;
+}
+
+#colorized-code div{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+#Save-Btn-Submit{
+    position: relative;
+    left: calc((100vw - 205px) / 2);
+    top: 87%;
+}
+
+#modal{
+    position: absolute;
+    width: 700px;
+    height: 300px;
+    /* background-color: #FDF6F0; */
+    /* left: calc((100vw - 500px) / 2);500px pe 500px era
+    top: calc((100vh - 500px) / 2); */
+    background-color: #222831;
+    left: calc((100vw - 700px) / 2);
+    top: calc((100vh - 300px) / 2);
+    z-index: 12;
+    /* display: subgrid; pusa singur */
+    display: none;
+    border-radius: 25px;
+    
+}
+
+#restu{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 11;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+#modal-message{
+    color: white;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    top: 30px;
+    /* elft     */
+    left: 30px;
+}
+
+#modal-input{
+    width: 300px;
+    height: 40px;
+    outline: 0;
+    /* border: 0; */
+    /* border: 0 solid transparent; 2il scrisai doar cas sal na bag in comentariu lol */
+    border: 2px solid #CD113B;
+    background-color: transparent;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 30px;
+    position: relative;
+    top: 100px;
+    right: 34px;
+}
+
+/* #modal-button s */
+
+#modal-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    top: 150px;
+    user-select: none;
+}

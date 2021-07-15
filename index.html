@@ -4,46 +4,141 @@
 <head>
     <title>GGPL</title>
     <link href="style.css" rel="stylesheet">
+    <!-- CSS only -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
 <body>
     <!--<div id="code-editor">-->
 
+    <div id="modalContainer">
+        <div id="modal">
+            <span id="modal-message">Mesaj</span>
+            <input type="text" id="modal-input">
+            <div id="modal-buttons">
+                <div id="Ok-Btn" class="btn">
+                    <span>OK</span>
+                </div>
+                <div id="Cancel-Btn" class="btn cancel-btn-class">
+                    <!--facui si calsa ca sa scriu in romana dar vad ca scrisai in engle za pa-->
+                    <span>Anulare</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <textarea id="code" style="resize: none;" spellcheck="false"></textarea>
-    <!-- <span style="color: blue;" id="haha">lol</span> -->
-    <div id="Compiling-loading-screen">
-        <!-- <span>Loading...</span> -->
-        <span>Compiling</span>
-        <!--crezui ca are doua l prima data puses pusasem 1 dupa vazui d pusai 2 si cautai pe nmet si vazui ca are doart doar 1 din obisnuinta cu ewngleza doi doi de l-->
-        <div id="dots">
-            <div class="dot" id="dot-1"></div>
-            <div class="dot" id="dot-2"></div>
-            <div class="dot" id="dot-3"></div>
+    <div id="restu"></div>
+
+    <div id="code-editor">
+        <!--se pare ca am mai facut asta o data pusesem code dar e deja asa ca de luais sl luai de susw code sus d coce  code editot re editor sussy boi lkos l;o lol -->
+
+
+        <textarea class="code" style="resize: none;" spellcheck="false"></textarea>
+
+
+        <div class="code" id="colorized-code"></div>
+        <!--<sapn style="color: green;">scrie</span></div>-->
+
+        <!-- <span style="color: blue;" id="haha">lol</span> -->
+        <div id="Compiling-loading-screen">
+            <!-- <span>Loading...</span> -->
+            <span>Compiling</span>
+            <!--crezui ca are doua l prima data puses pusasem 1 dupa vazui d pusai 2 si cautai pe nmet si vazui ca are doart doar 1 din obisnuinta cu ewngleza doi doi de l-->
+            <div id="dots">
+                <div class="dot" id="dot-1"></div>
+                <div class="dot" id="dot-2"></div>
+                <div class="dot" id="dot-3"></div>
+            </div>
+        </div>
+        <textarea class="code_compiled" style="resize: none;" spellcheck="false" contenteditable="false"
+            readonly></textarea>
+        <!--onkeypress="CloseConsole(event)"/textarea>-->
+        <div id="buttons">
+            <div id="Compile-Btn-Submit" class="btn">
+                <span>Compile</span>
+            </div>
+            <div id="Delete-Btn-Submit" class="btn">
+                <span>Delete</span>
+            </div>
+            <div id="Copy-Btn-Submit" class="btn">
+                <span>Copy</span>
+            </div>
+        </div>
+        <div id="Save-Btn-Submit" class="btn">
+            <span>Salveaza</span>
+        </div>
+        <div id="CompiledButtons">
+            <div id="Delete-Btn" class="btn">
+                <span>Delete</span>
+            </div>
+            <div id="Copy-Btn" class="btn">
+                <span>Copy</span>
+            </div>
+            <div id="Stop_Btn" class="btn">
+                <span>Stop</span>
+            </div>
+        </div>
+        <div id="book-container">
+            <a href="#docs"><i class="bi bi-book docs-button"></i></a>
+            <!--</i>-->
+            <!-- <i class="bi bi-book-fill"></i> -->
         </div>
     </div>
-    <textarea class="code_compiled" style="resize: none;" spellcheck="false" contenteditable="false"
-        readonly></textarea>
-    <div id="buttons">
-        <div id="Compile-Btn-Submit" class="btn">
-            <span>Compile</span>
+    <div id="docs">
+        <div id="back-button">
+            <!--backButton j  das s -->
+            <a href="#code-editor">Inapoi la cod</a>
         </div>
-        <div id="Delete-Btn-Submit" class="btn">
-            <span>Delete</span>
+
+        <div id="table-of-contents">
+            <span id="header">
+                Tabelul Continutului
+            </span>
+            <ul class="table-of-contents-items" style="list-style-type: none;">
+                <li class="table-of-contents-item"><a>Variabile</a></li>
+                <li class="table-of-contents-item item-border"><a>Consola</a></li>
+                <!--//Console-->
+                <li class="table-of-contents-item item-border"><a>Daca</a></li>
+            </ul>
         </div>
-        <div id="Copy-Btn-Submit" class="btn">
-            <span>Copy</span>
-        </div>
-    </div>
-    <div id="CompiledButtons">
-        <div id="Delete-Btn" class="btn">
-            <span>Delete</span>
-        </div>
-        <div id="Copy-Btn" class="btn">
-            <span>Copy</span>
-        </div>
-        <div id="Stop_Btn" class="btn">
-            <span>Stop</span>
+        <div id="continut">
+            <div id="Variabile-part-continut-lol" class="continut-part">
+                <!--continut-=part-->
+                <span id="Variables-Header" class="continut-part-header">Variabile</span>
+                <p id="Variabile-Description" class="continut-part-description"> O variabila stocheaza una sau mai
+                    multe
+                    valori. In GGPL(Good Game Programming Language) o variabila se declara astfel:</p>
+                <!--O Variabila este o functioe</p>-->
+                <!--1--><textarea name="code_example" cols="38" rows="2" class="code-example"
+                    readonly> ver exemplu = "Buna, Sunt o variabila"</textarea>
+                <!--//si uiatasem uitasem de readonly pusesem disabled si se facuse a,b alba pa        -->
+                <p id="Variable-Description-2" class="continut-part-description">Momentan o variabila poate tine
+                    astfel
+                    de valori:
+                <table class="Variable-Contents-table-accepted-valors">
+                    <!-- <th>da</th> -->
+                    <tr>
+                        <th>Nume</th>
+                        <th>Descriere</th>
+                        <th>Exemplu</th>
+                    </tr>
+                    <tr>
+                        <td>String</td>
+                        <td>O combinatie de numere si de litere</td>
+                        <td>Televizor</td>
+                    </tr>
+                    <tr>
+                        <td>Integer</td>
+                        <td>Un numar</td>
+                        <td>3, 7, 9, 5, 27, 132</td>
+                    </tr>
+                </table>
+                <!-- <table> -->
+                <!-- <li>String, o combinatie de numere si de litere</li> -->
+                <!-- </ul> -->
+                </p>
+            </div>
         </div>
     </div>
     <!--<div id="compiled-code">
